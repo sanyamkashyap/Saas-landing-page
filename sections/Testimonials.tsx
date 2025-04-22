@@ -8,6 +8,7 @@ import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 const testimonials = [
   {
@@ -66,35 +67,51 @@ const testimonials = [
   },
 ];
 
-const firstColumn = testimonials.slice(0,3);
-const secondColumn = testimonials.slice(3,6)
-const thirdColumn = testimonials.slice(6,9)
+
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6)
+const thirdColumn = testimonials.slice(6, 9)
+
+const TestimonialsColumn = (props: { className?: string; testimonials: typeof testimonials }) => {
+  return (
+
+    <div className={twMerge("flex flex-col gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",
+      props.className
+    )}>
+      {props.testimonials.map(({ text, imageSrc, name, username }, index) => (
+        <div className="card" key={index}>
+          <div>{text}</div>
+          <div className="flex items-center gap-2 mt-5">
+            <Image src={imageSrc}
+              width={40}
+              height={40}
+              alt={name}
+              className="rounded-full"></Image>
+            <div className="flex flex-col">
+              <div className="font-medium tracking-tight leading-5">{name}</div>
+              <div className="leading-5 tracking-tight">{username}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export const Testimonials = () => {
   return (
-    <section>
+    <section className=" bg-white">
       <div className="container">
         <div className="flex justify-center">
           <h2 className="tag">Testimonials</h2>
         </div>
-        <p className="section-title mt-5">What our users say</p>
-      </div>
+        <h2 className="section-title mt-5">What our users say</h2>
 
-      <div >
-        {testimonials.map(({ text, imageSrc, name, username }, index) => (
-          <div key={index} className="flex flex-col ">
-            <div>
-              <p>{text}</p>
-              <div>
-                <Image src={imageSrc} height={50} width={50} alt="avatar image"></Image>
-                <div>
-                  <h1>{name}</h1>
-                  <h1>{username}</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+        <div className="flex justify-center gap-6">
+          <TestimonialsColumn testimonials={firstColumn}></TestimonialsColumn>
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:flex"></TestimonialsColumn >
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:flex"></TestimonialsColumn>
+        </div>
       </div>
     </section>
   );
