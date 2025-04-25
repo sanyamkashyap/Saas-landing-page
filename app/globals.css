@@ -40,6 +40,10 @@
         @apply text-center text-[22px] leading-[30px] text-[#010D3E]
     }
 
+    .section-description2 {
+        @apply text-center text-[16px] leading-[23px] text-[#010D3E]
+    }
+
     .section-heading {
         @apply max-w-[540px] mx-auto;
     }

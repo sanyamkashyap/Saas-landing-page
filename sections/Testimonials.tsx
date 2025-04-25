@@ -69,8 +69,8 @@ const testimonials = [
 
 
 const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6)
-const thirdColumn = testimonials.slice(6, 9)
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 const TestimonialsColumn = (props: { className?: string; testimonials: typeof testimonials }) => {
   return (
@@ -100,7 +100,7 @@ const TestimonialsColumn = (props: { className?: string; testimonials: typeof te
 
 export const Testimonials = () => {
   return (
-    <section className=" bg-white">
+    <section className="bg-white pb-10">
       <div className="container">
         <div className="flex justify-center">
           <h2 className="tag">Testimonials</h2>
