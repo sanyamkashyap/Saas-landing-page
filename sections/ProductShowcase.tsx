@@ -37,6 +37,28 @@ export const ProductShowcase = () => {
             className="hidden md:block absolute -left-36 bottom24"
           />
         </div>
+        <div className="flex gap-4">
+          <div>
+            <h5 className="text-[18px] font-bold">Integration ecosystem</h5>
+            <p>Track your progress and motivate your efforts everyday</p>
+            <button className="btn btn-text">Learn more</button>
+          </div>
+          <div>
+            <h5 className="text-[18px] font-bold">Goal setting and tracking</h5>
+            <p>Set and track goals with manageable task breakdowns</p>
+            <button className="btn btn-text">Learn more</button>
+          </div>
+          <div>
+            <h5 className="text-[18px] font-bold">Secure data encryption</h5>
+            <p>Ensure your data safety with top-tier encryption</p>
+            <button className="btn btn-text">Learn more</button>
+          </div>
+          <div>
+            <h5 className="text-[18px] font-bold">Integration ecosystem</h5>
+            <p>Track your progress and motivate your efforts everyday</p>
+            <button className="btn btn-text">Learn more</button>
+          </div>
+        </div>
       </div>
     </section>
   );
