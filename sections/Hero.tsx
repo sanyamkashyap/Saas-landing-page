@@ -2,7 +2,6 @@
 
 import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
-import Image from "next/image";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "motion/react"
@@ -14,6 +13,7 @@ export const Hero = () => {
     target: heroRef,
     offset: ["start end", "end start"],
   });
+  
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
 
   useMotionValueEvent(scrollYProgress, 'change', (latestValue) => console.log(latestValue))
