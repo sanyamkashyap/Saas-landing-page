@@ -40,6 +40,10 @@
         @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001F88] text-transparent bg-clip-text
     }
 
+    .section-title2 {
+        @apply text-center text-[23px] leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001F88] text-transparent bg-clip-text
+    }
+
     .section-description {
         @apply text-center text-[22px] leading-[30px] text-[#010D3E]
     }

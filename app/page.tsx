@@ -6,6 +6,7 @@ import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import Everythingyouneed from "@/sections/Everythingyouneed";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero></Hero>
       <LogoTicker></LogoTicker>
       <ProductShowcase></ProductShowcase>
+      <Everythingyouneed></Everythingyouneed>
       <Pricing></Pricing>
       <Testimonials></Testimonials>
       <CallToAction></CallToAction>
