@@ -41,7 +41,7 @@
     }
 
     .section-title2 {
-        @apply text-center text-[23px] leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001F88] text-transparent bg-clip-text
+        @apply text-center text-[23px] leading-[30px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001F88] text-transparent bg-clip-text
     }
 
     .section-description {
@@ -58,6 +58,9 @@
 
     .card{
         @apply p-10 border border-[#222222]/10  rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+    }
+    .card2{
+        @apply p-10 border border-[#222222]/10  rounded-3xl shadow-[0_7px_14px_#EAEAEA] w-full
     }
 
     .align-text{

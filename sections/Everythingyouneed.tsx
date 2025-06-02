@@ -1,7 +1,6 @@
 import cube from "@/assets/cube-helix 1.png"
 import helix from "@/assets/cube-helix 2.png"
 import Image from "next/image"
-import { twMerge } from "tailwind-merge"
 
 const Everythingyouneed = () => {
     return (
@@ -18,13 +17,24 @@ const Everythingyouneed = () => {
                         Enjoy customizable lists, team work tools, and smart tracking all in one place. Set tasks, get reminders, and see your progress simply and quickly.
                     </p>
                 </div>
-                <div className="card">
-                    <div className="flex flex-col" >
-                        <Image src={helix} alt="cube"></Image>
+                <div className="flex flex-col md:flex-row gap-2 justify-between mt-8 ">
+                    <div className="card2">
+                        <div className="flex justify-center items-center py-2" >
+                            <Image src={helix} alt="cube"></Image>
+                        </div>
+                        <div>
+                            <h3 className="section-title2 mb-2">Integration ecosystem</h3>
+                            <p className="section-description2">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="section-title2">Integration ecosystem</h3>
-                        <p className="section-description2">Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place</p>
+                    <div className="card2">
+                        <div className="flex justify-center items-center py-2">
+                            <Image src={cube} alt="cube"></Image>
+                        </div>
+                        <div>
+                            <h3 className="section-title2 mb-2">Goal setting and tracking</h3>
+                            <p className="section-description2">Define and track your goals, breaking down objective into achievable tasks to keep your target in sight</p>
+                        </div>
                     </div>
                 </div>
             </div>
