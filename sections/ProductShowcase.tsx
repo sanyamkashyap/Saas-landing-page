@@ -9,15 +9,17 @@ import goalIcon from "@/assets/goalVector.png";
 import secIcon from "@/assets/scureVector.png";
 import notifyIcon from "@/assets/notifyIcon.png";
 import ArrowIcon from "@/assets/arrow-right.svg"
-import { motion, useScroll } from "motion/react"
+import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react";
 
 export const ProductShowcase = () => {
   const sectionRef = useRef(null);
-  useScroll({
+  const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start']
   })
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
+
 
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
@@ -43,6 +45,9 @@ export const ProductShowcase = () => {
             height={262}
             width={262}
             className="hidden md:block absolute -right-36 -top-32"
+            style={{
+              translateY,
+            }}
           />
           <motion.img
             src={tubeImage.src}
@@ -50,6 +55,9 @@ export const ProductShowcase = () => {
             height={248}
             width={248}
             className="hidden md:block absolute -left-36 bottom-24"
+            style={{
+              translateY,
+            }}
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16 px-7 pt-3">
